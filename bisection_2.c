@@ -2,7 +2,7 @@
 //using bisection method
 #include<stdio.h>
 #include<stdlib.h>
-
+#include<math.h>
 float Fun(float x) 
 {
 	float y;
@@ -19,7 +19,7 @@ void bisection(double a, double b)
     }
 
     double c, epsilon=0.001;
-    while ((b-a) >= epsilon)
+    while (fabs(b-a) >= epsilon)
 
     {
         // Find middle point
