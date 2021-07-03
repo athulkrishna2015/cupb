@@ -1,7 +1,8 @@
 //this program is to find the solution of function 
 //using bisection method
 #include<stdio.h>
-#include<stdlib.h>
+#include<math.h>
+
 
 float Fun(float x) 
 {
