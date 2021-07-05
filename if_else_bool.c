@@ -11,4 +11,6 @@ int main()
 	    printf("A or B not equal to 3\n");
     return 0;
 
+
+    return 0;
 }

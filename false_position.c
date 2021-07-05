@@ -1,5 +1,5 @@
 //this program is to find the solution of function 
-//using bisection method
+//using false position method
 #include<stdio.h>
 #include<math.h>
 
@@ -10,9 +10,9 @@ float Fun(float x)
         return y;
 }
 
-void bisection(double a, double b)
+void fp(double a, double b)
 {
-    if (Fun(a) * Fun(b) >= 0)
+    if (Fun(a) * Fun(b) >= 0) 
     {
         printf("You have not assumed right a and b\n");
         return;
@@ -23,7 +23,7 @@ void bisection(double a, double b)
 
     {
         // Find middle point
-        c = (a+b)/2;
+        c = a-((b-a)*Fun(a))/(Fun(b)-Fun(a));
 
         // Check if middle point is root
         if (Fun(c) == 0.0)
@@ -44,6 +44,6 @@ int main()
 {
 double a, b;
 a=0; b=4;
-bisection(a,b);
+fp(a,b);
 return 0;
 }
